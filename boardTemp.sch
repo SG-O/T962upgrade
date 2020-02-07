@@ -1,0 +1,155 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 8 10
+Title "T962 Upgrade"
+Date "2020-02-07"
+Rev "v0.1"
+Comp "SG-O"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Sensor_Temperature:DS18S20 U8
+U 1 1 5E41B841
+P 5000 2300
+F 0 "U8" H 4770 2346 50  0000 R CNN
+F 1 "DS18S20" H 4770 2255 50  0000 R CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4000 2050 50  0001 C CNN
+F 3 "http://datasheets.maximintegrated.com/en/ds/DS18S20.pdf" H 4850 2550 50  0001 C CNN
+F 4 "C52574" H 5000 2300 50  0001 C CNN "lcsc#"
+F 5 "DS18S20" H 5000 2300 50  0001 C CNN "manf#"
+	1    5000 2300
+	1    0    0    -1  
+$EndComp
+Text HLabel 5500 2300 2    50   BiDi ~ 0
+SW_IO
+Wire Wire Line
+	5300 2300 5500 2300
+Wire Wire Line
+	5000 2000 5000 1800
+Wire Wire Line
+	5000 2600 5000 2800
+$Comp
+L power:VSS #PWR?
+U 1 1 5E4206B7
+P 5000 2800
+AR Path="/5DD6D4DA/5DEBB035/5E4206B7" Ref="#PWR?"  Part="1" 
+AR Path="/5E34CFA0/5E4206B7" Ref="#PWR?"  Part="1" 
+AR Path="/5E3D0FD8/5E4206B7" Ref="#PWR?"  Part="1" 
+AR Path="/5E41B6C5/5E4206B7" Ref="#PWR041"  Part="1" 
+F 0 "#PWR041" H 5000 2650 50  0001 C CNN
+F 1 "VSS" H 4900 2900 50  0000 C CNN
+F 2 "" H 5000 2800 50  0001 C CNN
+F 3 "" H 5000 2800 50  0001 C CNN
+	1    5000 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VDD #PWR?
+U 1 1 5E4206BD
+P 5000 1800
+AR Path="/5E3D0FD8/5E4206BD" Ref="#PWR?"  Part="1" 
+AR Path="/5E41B6C5/5E4206BD" Ref="#PWR040"  Part="1" 
+F 0 "#PWR040" H 5000 1650 50  0001 C CNN
+F 1 "VDD" H 5017 1973 50  0000 C CNN
+F 2 "" H 5000 1800 50  0001 C CNN
+F 3 "" H 5000 1800 50  0001 C CNN
+	1    5000 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E4243E1
+P 6200 2250
+AR Path="/5DD6D4DA/5DD6D50E/5E4243E1" Ref="C?"  Part="1" 
+AR Path="/5DD6D4DA/5DDED058/5E4243E1" Ref="C?"  Part="1" 
+AR Path="/5DD6D4DA/5DDED066/5E4243E1" Ref="C?"  Part="1" 
+AR Path="/5DD6D4DA/5DDED074/5E4243E1" Ref="C?"  Part="1" 
+AR Path="/5E3D28F8/5E4243E1" Ref="C?"  Part="1" 
+AR Path="/5E4243E1" Ref="C?"  Part="1" 
+AR Path="/5E41B6C5/5E4243E1" Ref="C31"  Part="1" 
+F 0 "C31" H 6315 2296 50  0000 L CNN
+F 1 "100n" H 6315 2205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6238 2100 50  0001 C CNN
+F 3 "~" H 6200 2250 50  0001 C CNN
+F 4 "CC0603KRX7R9BB104" H 6200 2250 50  0001 C CNN "manf#"
+F 5 "C14663" H 6200 2250 50  0001 C CNN "lcsc#"
+	1    6200 2250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E4243E9
+P 6600 2250
+AR Path="/5DD6D4DA/5DD6D50E/5E4243E9" Ref="C?"  Part="1" 
+AR Path="/5DD6D4DA/5DDED058/5E4243E9" Ref="C?"  Part="1" 
+AR Path="/5DD6D4DA/5DDED066/5E4243E9" Ref="C?"  Part="1" 
+AR Path="/5DD6D4DA/5DDED074/5E4243E9" Ref="C?"  Part="1" 
+AR Path="/5E3D28F8/5E4243E9" Ref="C?"  Part="1" 
+AR Path="/5E4243E9" Ref="C?"  Part="1" 
+AR Path="/5E41B6C5/5E4243E9" Ref="C32"  Part="1" 
+F 0 "C32" H 6715 2296 50  0000 L CNN
+F 1 "1u" H 6715 2205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6638 2100 50  0001 C CNN
+F 3 "~" H 6600 2250 50  0001 C CNN
+F 4 "CL21B105KBFNNNE" H 6600 2250 50  0001 C CNN "manf#"
+F 5 "C28323" H 6600 2250 50  0001 C CNN "lcsc#"
+	1    6600 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 2100 6200 2000
+Wire Wire Line
+	6200 2000 6400 2000
+Wire Wire Line
+	6600 2000 6600 2100
+Wire Wire Line
+	6200 2400 6200 2500
+Wire Wire Line
+	6200 2500 6400 2500
+Wire Wire Line
+	6600 2500 6600 2400
+Wire Wire Line
+	6400 2500 6400 2800
+Connection ~ 6400 2500
+Wire Wire Line
+	6400 2500 6600 2500
+Wire Wire Line
+	6400 2000 6400 1800
+Connection ~ 6400 2000
+Wire Wire Line
+	6400 2000 6600 2000
+$Comp
+L power:VDD #PWR?
+U 1 1 5E425183
+P 6400 1800
+AR Path="/5E3D0FD8/5E425183" Ref="#PWR?"  Part="1" 
+AR Path="/5E41B6C5/5E425183" Ref="#PWR042"  Part="1" 
+F 0 "#PWR042" H 6400 1650 50  0001 C CNN
+F 1 "VDD" H 6417 1973 50  0000 C CNN
+F 2 "" H 6400 1800 50  0001 C CNN
+F 3 "" H 6400 1800 50  0001 C CNN
+	1    6400 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VSS #PWR?
+U 1 1 5E425DAA
+P 6400 2800
+AR Path="/5DD6D4DA/5DEBB035/5E425DAA" Ref="#PWR?"  Part="1" 
+AR Path="/5E34CFA0/5E425DAA" Ref="#PWR?"  Part="1" 
+AR Path="/5E3D0FD8/5E425DAA" Ref="#PWR?"  Part="1" 
+AR Path="/5E41B6C5/5E425DAA" Ref="#PWR043"  Part="1" 
+F 0 "#PWR043" H 6400 2650 50  0001 C CNN
+F 1 "VSS" H 6300 2900 50  0000 C CNN
+F 2 "" H 6400 2800 50  0001 C CNN
+F 3 "" H 6400 2800 50  0001 C CNN
+	1    6400 2800
+	-1   0    0    1   
+$EndComp
+$EndSCHEMATC
